@@ -3,7 +3,7 @@ init:
 	serverless plugin install -n serverless-apigateway-service-proxy
 build:
 	#dep ensure -v
-	env GOOS=linux GOARCH=amd64 go build -o hello main.go
+	env GOOS=linux GOARCH=amd64 go build -o bin/hello main.go
 
 
 deploy_dev: build

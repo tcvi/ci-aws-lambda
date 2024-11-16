@@ -11,7 +11,7 @@ type MyEvent struct {
 }
 
 func hello(ctx context.Context, request events.APIGatewayProxyRequest) (string, error) {
-	return "Hello APIGatewayProxyRequest", nil
+	return "Hello APIGatewayProxyRequest Github action", nil
 }
 
 func main() {
