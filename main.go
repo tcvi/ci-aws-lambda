@@ -15,7 +15,7 @@ type Response struct {
 func hello(ctx context.Context, request events.APIGatewayProxyRequest) (Response, error) {
 	name := os.Getenv("NAME")
 	return Response{
-		fmt.Sprintf("Hello %s", name),
+		fmt.Sprintf("Hello 2 %s", name),
 	}, nil
 }
 
