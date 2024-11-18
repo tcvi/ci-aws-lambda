@@ -47,13 +47,13 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_2 }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_2 }}
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-          role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_2 }}
+          role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID_2 }}
           role-duration-seconds: 900
-          role-session-name: ${{ secrets.AWS_ACCOUNT_NAME }}
+          role-session-name: MySessionName
 
       - name: Deploy to Lambda
         env:
