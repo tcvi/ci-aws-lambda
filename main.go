@@ -8,13 +8,15 @@ import (
 	"os"
 )
 
-type MyEvent struct {
+type Response struct {
 	Name string `json:"name"`
 }
 
-func hello(ctx context.Context, request events.APIGatewayProxyRequest) (string, error) {
+func hello(ctx context.Context, request events.APIGatewayProxyRequest) (Response, error) {
 	name := os.Getenv("NAME")
-	return fmt.Sprintf("Hello name: %s", name), nil
+	return Response{
+		fmt.Sprintf("Hello %s", name),
+	}, nil
 }
 
 func main() {
